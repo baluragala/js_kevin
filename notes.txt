@@ -1,0 +1,76 @@
+Day 1
+-----
+HTML, CSS and JS
+JS - Scripriting
+ECMA International
+ES8 / ES2017 
+ES3
+ES4.1 
+ES5 - 
+ES6 / ES2015
+ES7 / ES2016
+ES8 / ES2017  
+
+Syntax
+------
+variables - var (let & const [ES6])
+data types
+----------
+number
+string
+boolean
+undefined
+null
+symbol [ES6]
+
+Object
+
+Comments
+--------
+// - single line
+/*
+*/ - multi
+
+/** */
+
+
+Operators
+--------
+Arthimetic
+Comparison  / relational < , > <=, >= ==, === != !== 
+logical - AND && / OR || / NOT !
+assignment += , -=, *=, /= ++ --
+conactination + 
+
+typeof
+instanceof
+
+
+functions
+---------
+
+scope and context
+-----------------
+
+global
+local 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
