@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Understand this</title>
+</head>
+
+<body>
+    <button>Click1</button>
+    <button>Click2</button>
+    <div>
+        <p>One</p>
+        <p>One</p>
+        <p>One</p>
+        <p>One</p>
+
+    </div>
+
+    <script>
+        var button1 = document.querySelectorAll("button")[0];
+        button1.addEventListener("click", function () {
+            console.log(button1);
+            changeBackground.call(button1, 'red');
+        });
+
+        var button2 = document.querySelectorAll("button")[1];
+        button2.addEventListener("click", function () {
+            console.log(button2);
+            changeBackground.call(button2, 'green');
+        });
+
+        var div = document.querySelector("div");
+        div.addEventListener("click", function () {
+            changeBackground.call(div, 'purple');
+        });
+
+        function changeBackground(colorName) {
+            console.log(this);
+            this.style.backgroundColor = colorName;
+        }
+    </script>
+</body>
+
+</html>
