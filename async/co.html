@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/co/4.1.0/index.js"></script>
+    <title>CO</title>
+</head>
+
+<body>
+    <script>
+        var step1 = new Promise(function (resolve, reject) {
+            setTimeout(() => {
+                console.log(1);
+                console.log(2);
+                resolve();
+            }, 1000);
+        });
+
+        function step2() {
+            console.log(3);
+            console.log(4);
+        }
+
+        var step3 = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log(5);
+                console.log(6);
+                resolve();
+            }, 2000);
+        });
+
+        function step4() {
+            console.log(7);
+            console.log(8);
+        }
+
+
+        co(function* process() {
+            yield step1;
+            step2();
+            yield step3;
+            step4();
+        })
+    </script>
+</body>
+
+</html>
