@@ -24,3 +24,11 @@ function jsonToTable(json) {
     c1.innerText = p;
   }
 }
+
+var numbers = [5, 12, 8, 130, 44];
+
+var found = numbers.find(function(element) {
+  return element > 10;
+});
+
+console.log(found);

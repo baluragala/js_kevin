@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "fname": "zeo",
+      "lname": "zeo",
+      "email": "zeo@zeo.com"
+    },
+    {
+      "fname": "bala",
+      "lname": "zeo",
+      "email": "bala@zeo.com",
+      "id": 2
+    },
+    {
+      "fname": "bala1",
+      "lname": "zeo1",
+      "email": "bala1@zeo1.com",
+      "id": 3
+    },
+    {
+      "fname": "fadsaff",
+      "lname": "dfasdf",
+      "email": "adfasfsfas",
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "fname": "dfadsfafdasa",
+      "lname": "afsdfassafasfsaf",
+      "email": "adfadsfsaasas",
+      "id": 6
+    },
+    {
+      "fname": "asdfasddfa",
+      "lname": "sdfasdfsdf",
+      "email": "dfasfsadfafdf",
+      "id": 7
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./jquery-3.3.1.js"></script>
+    <title>jQuery</title>
+    <style>
+        #p1 {
+            background-color: rosybrown;
+        }
+
+        #p2 {
+            background-color: rebeccapurple;
+        }
+
+        #p3 {
+            background-color: brown;
+        }
+
+        p {
+            background: aquamarine;
+        }
+
+        .info {
+            color: crimson;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+    </div>
+    <button id="add">Add</button>
+    <button id="clear">Clear</button>
+    <button id="remove">Remove</button>
+
+    <script>
+        $(function () {
+            // $("body").html("<h1>Welcome to jquery</h1>")
+            // $("h1:first").mouseenter(function () {
+            //     $(this).attr("style", "color:red")
+            //     $(this).text()
+            //     console.log($(this).attr("style"))
+            // })
+            // $("h1:first").mouseleave(function () {
+            //     $(this).attr("style", "color:''")
+            // })
+
+
+
+            $("#add").click(function () {
+                var counter = 0;
+                $("#p1").prepend("some text " + (++counter) + " ")
+                $("#p2").prepend("some text " + (++counter) + " ")
+                $("#p3").prepend("some text " + (++counter) + " ")
+
+                $("#p1").before("<p>before para</p>")
+                $("#p1").after("<p>after para</p>", "<p>after para</p>", "<p>after para</p>",
+                    "<p>after para</p>")
+                $("p").click(function () {
+                    console.log(this);
+                    $(this).toggleClass("info");
+                    $(this).css({
+                        "font-size": "36px",
+                        "font-weight": "bold"
+                    })
+                })
+
+
+            })
+
+            $("#clear").click(function () {
+                $("div").empty();
+            })
+
+            $("#remove").click(function () {
+                console.log($("p"));
+                $("p").remove(":first");
+            })
+        })
+    </script>
+</body>
+
+</html>

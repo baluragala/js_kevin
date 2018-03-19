@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - Creating</title>
+</head>
+
+<body onload='alert("loaded")' onscroll="console.log(window.scrollY)">
+    <!-- <header style="background-color:goldenrod">
+        <h1 style="color:forestgreen; padding:10px;text-align:center">Online Store</h1>
+    </header> -->
+    <a href="http://aa.com" name="aa1">Aa</a>
+    <a href="http://aa.com" name="aa2">Aa</a>
+    <a href="http://aa.com" name="aa3">Aa</a>
+    <a href="http://aa.com" name="aa4">Aa</a>
+    <a href="http://aa.com" name="aa5">Aa</a>
+    <a href="http://aa.com" name="aa6">Aa</a>
+    <script>
+        var header = document.createElement("header");
+        header.style.backgroundColor = "goldenrod";
+        var h1 = document.createElement("h1");
+        //h1.innerText = "Online Store";
+        h1.style.color = "forestgreen";
+        h1.style.padding = "10px";
+        h1.style.textAlign = "center";
+        h1.setAttribute("id", "mainhead")
+
+        var s = document.createElement("span");
+        s.innerText = "H"
+        s.style.color = 'red';
+        h1.appendChild(s);
+        var t = document.createTextNode("ello");
+        h1.appendChild(t);
+
+        var h2 = document.createElement("h1");
+        h2.innerText = "Online Store";
+        h2.style.color = "forestgreen";
+        h2.style.padding = "10px";
+        h2.style.textAlign = "center";
+        h2.setAttribute("id", "mainhead1")
+        h2.setAttribute("class", "head")
+
+        header.appendChild(h1);
+        header.appendChild(h2);
+
+        document.body.appendChild(header);
+
+        var button = document.createElement("button");
+        button.innerText = "Click Me";
+
+        var button1 = document.createElement("button");
+        button1.innerText = "Delete";
+
+        button.onclick = function () {
+            //var ele = document.querySelector("#mainhead");
+            h1.innerText = h1.innerText + " - normal";
+        }
+
+        button.addEventListener("dbllick", function () {
+            //var ele = document.querySelector("#mainhead");
+            this.innerText = this.innerText + " - change";
+        })
+
+        button.addEventListener("click", function () {
+            //var ele = document.querySelector("#mainhead");
+            setTimeout(() => {
+                this.innerText = this.innerText + " - another change";
+            }, 2000)
+
+        })
+
+        h1.addEventListener("click", function () {
+            this.innerText = "Online Store";
+        })
+
+        button1.addEventListener("click", function () {
+            var ele = document.querySelector("h1");
+            ele.parentNode.removeChild(ele);
+        })
+
+        document.body.appendChild(button);
+        document.body.appendChild(button1);
+    </script>
+</body>
+
+</html>

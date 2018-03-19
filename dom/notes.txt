@@ -1,0 +1,7 @@
+find
+----
+getElementById
+getElementByTagName
+getElementByClassName
+querySelector
+querySelectorAll

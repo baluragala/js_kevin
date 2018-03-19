@@ -1,0 +1,60 @@
+Selectors
+---------
+element -> $("p") $("h1")
+id -> $("id1")
+class -> $(".test")
+$("*")
+$(this)
+$("p.intro")
+$("p:first")
+$("ul li:first")
+$("[type]")
+$("[type='text']")
+$("p").click()
+
+get / set
+---------
+html
+text
+val
+attr
+
+Add
+---
+append
+prepend
+after
+before
+
+remove
+------
+remove
+empty
+
+css
+---
+addClass
+removeClass
+toggleClass
+css
+
+Ajax
+----
+
+animations
+----------
+animate
+
+
+show/hide
+--------
+show
+hide
+toggle
+
+fading
+------
+fadeIn
+fadeOut
+fadeToggle
+fadeTo()

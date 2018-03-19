@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Table</title>
+    <style>
+        body {
+            line-height: 40px;
+        }
+
+        label {
+            margin: 20px;
+        }
+
+        table tr td {
+            border: 1px solid chocolate;
+        }
+    </style>
+
+    <script>
+        var currentRow = 0;
+
+        function add() {
+            var table = document.getElementById('t1');
+            var rows = parseInt(document.getElementById('rows').value);
+            var cols = parseInt(document.getElementById('cols').value);
+            console.log(rows, cols);
+            for (var i = 1; i <= rows; i++) {
+                currentRow++;
+                var row = document.createElement('tr');
+                for (var j = 1; j <= cols; j++) {
+                    var col = document.createElement('td');
+                    var button = document.createElement('button');
+                    button.addEventListener('dblclick', function () {
+                        console.log(this.parentNode);
+                        this.parentNode.removeChild(this);
+                    })
+                    button.addEventListener('click', function () {
+                        this.parentNode.setAttribute('style', "background-color:red");
+                        this.setAttribute('style', "text-decoration: line-through");
+                    })
+                    button.textContent = "[" + currentRow + "," + j + "]";
+                    col.appendChild(button);
+                    row.appendChild(col);
+                }
+                console.log(row);
+                table.appendChild(row)
+            }
+            console.log(table)
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Dynamic Table</h1>
+    <label>Number of rows to add :</label>
+    <input id="rows" type="text" />
+    </br>
+    <label>Number of cols to add :</label>
+    <input id="cols" type="text" />
+    </br>
+    <button onclick="add()">Add</button>
+    <table id="t1">
+
+    </table>
+    <div id="report">
+
+    </div>
+</body>
+
+</html>

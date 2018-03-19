@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./jquery-3.3.1.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button>hide</button>
+    <p>
+        There's a lot more to learn about building web sites and applications with jQuery than can fit in API documentation. If you're
+        looking for explanations of the basics, workarounds for common problems, best practices, and how-tos, you're in the
+        right place!
+    </p>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                // $("p").toggle(1000, function () {
+                //     if ($("p[style]").attr("style").indexOf("none")) {
+                //         $("button").text("show")
+                //     } else {
+                //         $("button").text("hide")
+                //     }
+                // })
+
+                $("p").fadeToggle("slow")
+            })
+        })
+    </script>
+</body>
+
+</html>
