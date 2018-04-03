@@ -1,0 +1,99 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Mac book pro",
+      "price": 2000,
+      "stock": 20
+    },
+    {
+      "name": "Dell XPS",
+      "price": "1200",
+      "stock": "20",
+      "id": 2
+    },
+    {
+      "name": "new ",
+      "price": "12",
+      "stock": "12",
+      "id": 6
+    },
+    {
+      "name": "new 222",
+      "price": "11",
+      "stock": "11",
+      "id": 8
+    },
+    {
+      "name": "new produ",
+      "price": "22",
+      "stock": "2",
+      "id": 9
+    },
+    {
+      "name": "XBox",
+      "price": "2000",
+      "stock": "150",
+      "id": 10
+    },
+    {
+      "name": "PS4",
+      "price": "900",
+      "stock": "200",
+      "id": 11
+    },
+    {
+      "name": "wwww",
+      "price": "11",
+      "stock": "111",
+      "id": 12
+    },
+    {
+      "name": "qqqq",
+      "price": "11",
+      "stock": "111",
+      "id": 13
+    },
+    {
+      "name": "Iphone X",
+      "price": "2000",
+      "stock": "120",
+      "id": 14
+    },
+    {
+      "name": "qaqzqaaa",
+      "price": "11",
+      "stock": "111",
+      "id": 15
+    },
+    {
+      "name": "qqaq",
+      "price": "11",
+      "stock": "11",
+      "id": 16
+    },
+    {
+      "name": "qazxswe",
+      "price": "22",
+      "stock": "222",
+      "id": 17
+    }
+  ]
+}

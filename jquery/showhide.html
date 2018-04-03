@@ -7,6 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./jquery-3.3.1.js"></script>
     <title>Document</title>
+    <style>
+        #panel {
+            display: none;
+            background: crimson;
+            border: 1px solid black;
+        }
+
+        #slide {
+            background: crimson;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,6 +28,13 @@
         looking for explanations of the basics, workarounds for common problems, best practices, and how-tos, you're in the
         right place!
     </p>
+
+    <div id="slide">Slide</div>
+    <div id="panel">
+        There's a lot more to learn about building web sites and applications with jQuery than can fit in API documentation. If you're
+        looking for explanations of the basics, workarounds for common problems, best practices, and how-tos, you're in the
+        right place!
+    </div>
     <script>
         $(function () {
             $("button").click(function () {
@@ -27,7 +46,11 @@
                 //     }
                 // })
 
-                $("p").fadeToggle("slow")
+                $("p").fadeToggle("fast")
+            })
+
+            $('#slide').click(function () {
+                $("#panel").slideToggle("fast")
             })
         })
     </script>
